@@ -67,7 +67,7 @@ def run(output_dir: Path):
         split="train[0:200]",  # we are only taking a small sample for the toy example
         num_shards=1,  # as we have a small sample, we don't need many shards, you should increase this for larger datasets
         batch_format=BatchFormat.ARROW,
-        batch_size=5,  # adjust to your system's size
+        batch_size=10,  # adjust to your system's size
     )
     # setup the output to write to parquet
     output_config = ParquetOutputConfig(
