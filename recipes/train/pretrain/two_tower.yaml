@@ -9,7 +9,7 @@ model_arch: toy_two_tower_diffusion_lcm
 
 criterion:
   name: two_tower_diffusion_next_sent
-  cf_guidance_probability: 0.15
+#  cf_guidance_probability: 0.15
   reduction: sum
 #  log_losses_per_timestep_bucket: False
   compute_rmse: False
