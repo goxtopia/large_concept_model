@@ -27,7 +27,7 @@ from lcm.datasets.sentence_splitter_pipeline import (
 )
 
 
-def run(output_dir: Path):
+def run():
     """
     launch a preprocessing pipeline, this will use SAT to split text in sentences and then use SONAR to
     embed each sentence.
@@ -36,6 +36,7 @@ def run(output_dir: Path):
     `output_dir` is the directory where the processed data will be written. The output will be in a parquet file format.
     """
     # setup the sentence splitter
+    output_dir = Path('./data')
     splitter_config = SentenceSplitterConfig(
         columns=[
             "text"
